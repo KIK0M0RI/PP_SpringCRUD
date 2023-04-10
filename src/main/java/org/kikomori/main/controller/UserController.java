@@ -16,8 +16,6 @@ public class UserController {
     @Autowired
     public UserController(UserService userService) {
         this.userService = userService;
-        userService.save(new User("asdascascascas", "sacascascs", 1));
-        userService.save(new User("sacascasascas", "ascasccs", 2));
     }
 
     @GetMapping()
@@ -26,10 +24,14 @@ public class UserController {
         return "index";
     }
 
+    @GetMapping("/new")
+    public String newUser(@ModelAttribute("user") User user) {
+        return "new";
+    }
+
     @PostMapping()
     public String save(@ModelAttribute("user") User user) {
         userService.save(user);
-        return "index";
+        return "redirect:/users";
     }
-
 }
