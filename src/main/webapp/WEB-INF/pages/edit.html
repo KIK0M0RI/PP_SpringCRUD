@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>new</title>
+    <title>edit</title>
     <style>
         /* Стилизация формы */
         form {
@@ -58,19 +58,22 @@
     </style>
 </head>
 <body>
-<h2>ADDING A USER</h2>
+<h2>UPDATE USER</h2>
 
-<form th:method="POST" th:action="@{/users}" th:object="${user}">
+<form th:method="PATCH" th:action="@{/users/{id}(id=${id})}" th:object="${user}">
     <label for="name">name:</label>
-    <input type="text" id="name" name="name" th:field="*{name}">
+    <input type="text" id="name" th:field="*{name}">
+
     <br>
     <label for="surname">surname:</label>
-    <input type="text" id="surname" name="surname" th:field="*{surname}">
+    <input type="text" id="surname" th:field="*{surname}">
+
     <br>
     <label for="age">age:</label>
-    <input type="text" id="age" name="age" th:field="*{age}">
+    <input type="text" id="age" th:field="*{age}">
+
     <br>
-    <input type="submit" value="add" class="button">
+    <input type="submit" value="update" class="button">
 </form>
 </body>
 </html>
