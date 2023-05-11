@@ -1,7 +1,5 @@
-package org.kikomori.main.config;
+package org.example.config;
 
-import jakarta.servlet.Filter;
-import jakarta.servlet.FilterRegistration;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import org.springframework.web.filter.HiddenHttpMethodFilter;

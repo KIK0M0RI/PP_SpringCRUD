@@ -1,7 +1,7 @@
-package org.kikomori.main.service;
+package org.example.service;
 
-import org.kikomori.main.model.User;
-import org.kikomori.main.repository.UserRepository;
+import org.example.model.User;
+import org.example.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
